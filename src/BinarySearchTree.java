@@ -12,7 +12,11 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     //use Node's recursive size
     private int size(Node x) {
-        return 0;
+        if (x == null){ //if node is null, search has reached a leaf
+            return 0;
+        } else {
+            return (1 + size(x.getLeft()) + size(x.getRight())); //add one to account for curr node and add size of its right/left branch
+        }
     }
 
     public boolean isEmpty() {
