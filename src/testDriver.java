@@ -27,6 +27,12 @@ public class testDriver {
         System.out.println("d: " + bst.get(20));
         System.out.println("d: " + bst.get(-20));
 
+        //testing contains()
+        System.out.println("true: " + bst.contains(100));
+        System.out.println("false: " + bst.contains(1000));
+        System.out.println("true: " + bst.contains(20));
+        System.out.println("true: " + bst.contains(-20));
+
 
     }
 }

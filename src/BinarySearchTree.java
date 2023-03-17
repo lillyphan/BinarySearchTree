@@ -64,7 +64,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
 
     public boolean contains(Key key) {
-        return false;
+        return (get(key) != null);
     }
 
     public Value remove(Key key) {
