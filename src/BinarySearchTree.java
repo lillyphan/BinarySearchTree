@@ -32,7 +32,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
     //sets left/right or creates a new node appropriately, returns the
     //modified node n
     private Node<Key, Value> put(Node<Key, Value> n, Key key, Value val) {
-        if (n == null) { //if the current node doesn't exists, assign the key and val to a new node at the right location
+        if (n == null) { //if the current node doesn't exist, assign the key and val to a new node at the right location
             n = new Node<>(key, val, 1);
         } else {
             if (n.getKey().compareTo(key) >= 1){ //if current key is greater than key, move to the left
@@ -46,18 +46,25 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     //recursive get wrapper
     public Value get(Key key) {
-
         return get(root, key);
     }
 
     //recursive get
     //returns null if the key does not exist
     private Value get(Node<Key, Value> n, Key key) {
-        return null;
+        if (isEmpty() || n == null){ //if the tree is empty or the search has ended at a leaf, return null b/c key doesn't exist
+            return null;
+        } else if (key == n.getKey()){ //when n's key matches up, return the value at that node
+            return n.getValue();
+        } else if (n.getKey().compareTo(key) >= 1) { //if current key is greater than key, move to the left
+            return get(n.getLeft(), key);
+        } else { //otherwise, current key is less than or equal to the key, move right
+            return get(n.getRight(), key);
+        }
     }
 
     public boolean contains(Key key) {
-        return false;
+        return (get(key) != null);
     }
 
     public Value remove(Key key) {
