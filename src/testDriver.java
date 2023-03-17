@@ -33,6 +33,9 @@ public class testDriver {
         System.out.println("true: " + bst.contains(20));
         System.out.println("true: " + bst.contains(-20));
 
+        //testing min
+        System.out.println("-20: " + bst.min());
+        System.out.println("200: " + bst.max());
 
     }
 }

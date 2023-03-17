@@ -97,7 +97,11 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     //returns the node at the left most left branch of n
     private Node<Key, Value> min(Node<Key, Value> n) {
-        return null;
+        if (n.getLeft() == null){
+            return n;
+        } else {
+            return min(n.getLeft());
+        }
     }
 
     public Key max() {
@@ -106,7 +110,11 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     //returns the node at the right most right branch of n
     private Node<Key, Value> max(Node<Key, Value> n) {
-        return null;
+        if (n.getRight() == null){
+            return n;
+        } else {
+            return max(n.getRight());
+        }
     }
 
     public String toString() {
