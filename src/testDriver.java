@@ -35,7 +35,7 @@ public class testDriver {
 
         //testing min
         System.out.println("-20: " + bst.min());
-
+        System.out.println("200: " + bst.max());
 
     }
 }
