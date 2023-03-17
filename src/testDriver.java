@@ -1,3 +1,8 @@
+// Author:           Lilly Phan
+// Lab Section:      testDriver
+// Description:      testDriver is a Java class containing the main function to test out the classes Node.java and BinarySearchTree.java
+// Last Edited:      03/17/2023
+
 public class testDriver {
     public static void main(String[] args) {
         BinarySearchTree<Integer, String> bst = new BinarySearchTree();

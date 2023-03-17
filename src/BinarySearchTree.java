@@ -1,3 +1,8 @@
+// Author:           Lilly Phan
+// Lab Section:      BinarySearchTree
+// Description:      BinarySearchTree is a Java class creating a binary search tree or a node-based binary tree data structure by making use of Node.java.
+// Last Edited:      03/17/2023
+
 public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     public Node<Key, Value> root;
