@@ -3,8 +3,12 @@ public class testDriver {
         BinarySearchTree<Integer, String> bst = new BinarySearchTree();
 
         //testing size()
-        System.out.println(bst.size());
+        System.out.println("0: " + bst.size());
 
+        //testing isEmpty()
+        System.out.println("true: " + bst.isEmpty());
+
+        //testing put()
         bst.put(-20, "d");
         bst.put(100, "a");
         bst.put(50, "c");
@@ -12,6 +16,10 @@ public class testDriver {
         bst.put(20, "d");
 
         System.out.println(bst);
+
+        System.out.println("false: " + bst.isEmpty());
+
+        System.out.println("5: " + bst.size());
 
 
     }

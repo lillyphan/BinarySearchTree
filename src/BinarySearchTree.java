@@ -20,7 +20,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
 
     public boolean isEmpty() {
-        return false;
+        return (size() == 0);
     }
 
     //recursive put wrapper
