@@ -21,6 +21,12 @@ public class testDriver {
 
         System.out.println("5: " + bst.size());
 
+        //testing get()
+        System.out.println("a: " + bst.get(100));
+        System.out.println("null: " + bst.get(1000));
+        System.out.println("d: " + bst.get(20));
+        System.out.println("d: " + bst.get(-20));
+
 
     }
 }
